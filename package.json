@@ -1,10 +1,12 @@
 {
   "name": "goit-js-hw-10-food-service",
   "version": "1.0.0",
-  "description": "GoIT JS Р”РѕРјР°С€РЅРµРµ Р·Р°РґР°РЅРёРµ 10\r start 09.08.2021\r by Sergej Pjatygin\r sergej.pjatygin@gmail.com",
+  "description": "GoIT JS Домашнее задание 10\r start 09.08.2021\r by Sergej Pjatygin\r sergej.pjatygin@gmail.com",
   "main": "index.js",
+  "homepage": "https://github.com/sptgin/goit-js-hw-10-food-service#readme",
   "scripts": {
-    "start": "node index.js"
+    "dev": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /parcel-project-template/"
   },
   "repository": {
     "type": "git",
@@ -16,14 +18,11 @@
   "bugs": {
     "url": "https://github.com/sptgin/goit-js-hw-10-food-service/issues"
   },
-  "homepage": "https://github.com/sptgin/goit-js-hw-10-food-service#readme",
-  "dependencies": {
-    "clean-webpack-plugin": "^4.0.0-alpha.0",
-    "handlebars": "^4.7.7",
-    "handlebars-loader": "^1.7.1",
-    "nanoid": "^3.1.23",
-    "validator": "^13.6.0",
-    "webpack": "^5.49.0",
-    "webpack-cli": "^4.7.2"
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-handlebars-precompile": "^1.0.2",
+    "parcel-plugin-nuke-dist": "^1.0.1",
+    "posthtml-include": "^1.6.2",
+    "sass": "^1.32.8"
   }
 }
