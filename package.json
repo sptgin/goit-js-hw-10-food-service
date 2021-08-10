@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "GoIT JS Домашнее задание 10\r start 09.08.2021\r by Sergej Pjatygin\r sergej.pjatygin@gmail.com",
   "main": "index.js",
-  "homepage": "https://sptgin.github.io/goit-js-hw-10-food-service",
+  "homepage": "https://github.com/sptgin/goit-js-hw-10-food-service",
   "scripts": {
     "dev": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /goit-js-hw-10-food-service/",
