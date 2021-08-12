@@ -10,7 +10,7 @@ const menuTheme = document.querySelector('body');
 themeSwitch.addEventListener('change', changeTheme);
 document.addEventListener('DOMContentLoaded', () => {
   if (localStorage.getItem('theme') === null) {
-    initTheme(Theme.DARK);
+    initTheme(Theme.LIGHT);
   } else {
     initTheme(localStorage.getItem('theme'));
   }
@@ -24,8 +24,8 @@ const Theme = {
 function initTheme(theme) {
   localStorage.setItem('theme', theme);
   menuTheme.classList.add(theme);
-  if (theme === Theme.DARK) {
-    themeSwitch.checked = true;
+  if (theme === Theme.LIGHT) {
+    themeSwitch.checked = false;
   }
 }
 
