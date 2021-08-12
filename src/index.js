@@ -9,11 +9,9 @@ const themeSwitch = document.querySelector('.theme-switch__toggle');
 const menuTheme = document.querySelector('body');
 themeSwitch.addEventListener('change', changeTheme);
 document.addEventListener('DOMContentLoaded', () => {
-  if (localStorage.getItem('theme') === null) {
-    initTheme(Theme.LIGHT);
-  } else {
-    initTheme(localStorage.getItem('theme'));
-  }
+  localStorage.getItem('theme') === null
+    ? initTheme(Theme.LIGHT)
+    : initTheme(localStorage.getItem('theme'));
 });
 
 const Theme = {
