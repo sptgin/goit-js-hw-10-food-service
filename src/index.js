@@ -17,10 +17,10 @@ const Theme = {
   DARK: 'dark-theme',
 };
 
-function initTheme(currentTheme, deaultTheme) {
+function initTheme(currentTheme, defaultTheme) {
   if (currentTheme === null) {
-    localStorage.setItem('theme', deaultTheme);
-    menuTheme.classList.add(deaultTheme);
+    localStorage.setItem('theme', defaultTheme);
+    menuTheme.classList.add(defaultTheme);
     themeSwitch.checked = false;
   } else {
     menuTheme.classList.add(currentTheme);
