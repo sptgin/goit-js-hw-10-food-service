@@ -9,19 +9,23 @@ const themeSwitch = document.querySelector('.theme-switch__toggle');
 const menuTheme = document.querySelector('body');
 themeSwitch.addEventListener('change', changeTheme);
 document.addEventListener('DOMContentLoaded', () => {
-  if (localStorage.getItem('theme') === null) {
-    localStorage.setItem('theme', Theme.LIGHT);
-    menuTheme.classList.add(Theme.LIGHT);
-    themeSwitch.checked = false;
-  } else {
-    menuTheme.classList.add(localStorage.getItem('theme'));
-  }
+  initTheme(localStorage.getItem('theme'), Theme.LIGHT);
 });
 
 const Theme = {
   LIGHT: 'light-theme',
   DARK: 'dark-theme',
 };
+
+function initTheme(currentTheme, deaultTheme) {
+  if (currentTheme === null) {
+    localStorage.setItem('theme', deaultTheme);
+    menuTheme.classList.add(deaultTheme);
+    themeSwitch.checked = false;
+  } else {
+    menuTheme.classList.add(currentTheme);
+  }
+}
 
 function changeTheme(event) {
   if (themeSwitch.checked) {
