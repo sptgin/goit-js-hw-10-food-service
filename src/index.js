@@ -23,7 +23,10 @@ function initTheme(currentTheme, defaultTheme) {
     menuTheme.classList.add(defaultTheme);
     themeSwitch.checked = false;
   } else {
-    menuTheme.classList.add(currentTheme);
+    if (currentTheme === Theme.DARK) {
+      themeSwitch.checked = true;
+      menuTheme.classList.add(currentTheme);
+    }
   }
 }
 
